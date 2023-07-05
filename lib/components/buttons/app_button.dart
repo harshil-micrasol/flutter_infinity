@@ -45,7 +45,7 @@ class AppButton extends StatefulWidget {
     this.height,
     this.fontSize,
     this.child,
-    this.disableButton,
+    this.disableButton = false,
     this.loader = false,
     this.borderRadius,
     required this.onPressed,
