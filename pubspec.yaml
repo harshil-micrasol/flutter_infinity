@@ -1,7 +1,7 @@
 name: flutter_infinity
 description: flutter infinity components
 version: 0.0.1
-homepage:
+homepage: https://github.com/harshil-micrasol/flutter_infinity
 
 environment:
   sdk: '>=3.0.5 <4.0.0'

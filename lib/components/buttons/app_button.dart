@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../utils/utils.dart';
+import '../../utils/utils.dart';
 import '../app_loader.dart';
 
 enum ButtonType { elevated, gradient, outline }
@@ -27,7 +27,6 @@ class AppButton extends StatefulWidget {
   final VoidCallback onPressed;
   final VoidCallback? onLongPress;
   final EdgeInsetsGeometry? padding;
-
   final Function(bool)? onHighlightChanged;
 
   const AppButton({
@@ -175,7 +174,7 @@ class _AppButtonState extends State<AppButton> {
   }
 
   Color? get titleColor {
-    return widget.buttonType == ButtonType.outline ? Theme.of(context).primaryColor.withOpacity(disableOpacity) : Theme.of(context).textTheme.bodyMedium?.color?.withOpacity(disableOpacity);
+    return widget.buttonType == ButtonType.outline ? Theme.of(context).primaryColor.withOpacity(disableOpacity) : Colors.white.withOpacity(disableOpacity);
   }
 
   bool get loadingOrDisableStatus {
@@ -187,6 +186,6 @@ class _AppButtonState extends State<AppButton> {
   }
 
   double get disableOpacity {
-    return widget.disableButton == true ? .4 : 1;
+    return widget.disableButton == true ? (Get.isDarkMode ? .6 : .9) : 1;
   }
 }
